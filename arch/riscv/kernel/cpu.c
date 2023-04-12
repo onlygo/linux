@@ -101,6 +101,7 @@ static int c_show(struct seq_file *m, void *v)
 	if (!of_property_read_string(node, "compatible", &compat)
 	    && strcmp(compat, "riscv"))
 		seq_printf(m, "uarch\t\t: %s\n", compat);
+	seq_printf(m, "cpu MHz\t\t: 1000.000\n");
 	seq_puts(m, "\n");
 	of_node_put(node);
 
